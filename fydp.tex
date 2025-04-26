@@ -1,0 +1,96 @@
+\documentclass[a4paper,11pt]{report}
+
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[top=1.5cm, bottom=3cm, left=2.5cm, right=2.5cm]{geometry} % Adjust margins
+\usepackage{setspace}
+\usepackage[linktoc=page]{hyperref}
+\usepackage{sectsty}
+\chapterfont{\centering}
+\usepackage{makeidx}
+\usepackage{url}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{framed}
+\usepackage{longtable}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{booktabs} % For better looking tables
+\usepackage{array} 
+\usepackage[noend,ruled,noline,linesnumbered,algochapter]{algorithm2e}
+
+% Set header and footer space
+\setlength{\headheight}{0pt} % Remove extra height in header
+\setlength{\headsep}{0.5cm} % Reduce space between header and text
+
+% Title Page
+\begin{document}
+
+% Fancy header and footer settings
+\pagestyle{fancy}
+\fancypagestyle{plain}{%
+    \fancyhf{} % clear all header and footer fields
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot[L]{\textit{©Daffodil International University}}
+    \fancyfoot[R]{\thepage}
+}
+
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\textit{©Daffodil International University}}
+\fancyfoot[R]{\thepage}
+
+% Set headers: chapter on the left, section on the right
+\fancyhead[L]{\nouppercase{\leftmark}} % Chapter title on the left
+\fancyhead[R]{\nouppercase{\rightmark}} % Section title on the right
+
+% Title Page
+\input{initial/0.0.title.tex}
+\clearpage
+
+% Set Roman page numbering for initial pages
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+% Declaration-------------------------
+\input{initial/0.1.declaration.tex}
+
+\newpage
+\input{initial/0.2.CO-PO.tex}
+
+% Table of contents
+\renewcommand*\contentsname{Table of Contents}
+\tableofcontents
+\clearpage
+
+\renewcommand\bibname{References}
+\clearpage
+
+% Start of report and chapters
+\pagenumbering{arabic} % Switch to Arabic numbering
+\setcounter{page}{1}
+
+% Reapply header and footer settings for the main content
+\fancyhf{} % clear header and footer
+\fancyfoot[L]{\textit{©Daffodil International University}}
+\fancyfoot[R]{\thepage}
+\fancyhead[L]{\nouppercase{\leftmark}} % Chapter title on the left
+\fancyhead[R]{\nouppercase{\rightmark}} % Section title on the right
+
+% Chapters content...................................
+\input{chapters/1.intro}
+\input{chapters/2.Literature Review.tex}
+\input{chapters/3.Proposed improvements.tex}
+\input{chapters/4.Methodology (one of the proposed improvements).tex}
+\input{chapters/5.Experimental Analysis with appropriate figures and tables.tex}
+\input{chapters/6.Conclusion}
+\input{chapters/7.contribution}
+
+
+
+   
+   
+   
+
+\clearpage
+
+\end{document}

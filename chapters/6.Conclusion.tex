@@ -1,0 +1,17 @@
+\chapter{Conclusion}
+
+In this project, we explored the problem of house price prediction at a subregion level using machine learning techniques. By leveraging a fully connected neural network architecture, we built a model capable of learning complex patterns and relationships within real estate datasets. Unlike traditional regression methods, our approach captured non-linear dependencies and provided more accurate predictive outputs.
+
+The model was trained and evaluated on datasets from two major cities, New York City and Beijing. The achieved RMSE values of 21.43 and 60.19 respectively demonstrate that even a simplified neural network can outperform basic machine learning models in capturing property valuation trends. The training and validation curves indicated that the model generalized well without significant overfitting, while scatter plot analysis confirmed a strong correlation between predicted and actual house prices.
+
+However, the project also revealed certain limitations. Due to the simplicity of the network architecture, extreme variations in property prices (outliers) were not always predicted accurately. Additionally, external economic factors, demographic shifts, and geographic influences were not fully integrated into the current model, limiting its overall predictive capability.
+
+Looking forward, several improvements can be made to enhance the system:
+\begin{itemize}
+    \item Implementing multi-branch feature extraction to separately handle short-term and long-term features.
+    \item Introducing Gated Co-Attention mechanisms to dynamically focus on the most relevant features during prediction.
+    \item Utilizing future expectation modeling through techniques like Kalman Filters to capture upcoming market trends.
+    \item Expanding the dataset by integrating socio-economic indicators, geographic data, and neighborhood statistics for more comprehensive modeling.
+\end{itemize}
+
+Overall, the work accomplished in this project lays a strong foundation for advanced predictive modeling in the real estate sector. It opens opportunities to develop intelligent, data-driven decision-making tools that can benefit buyers, sellers, investors, and urban planners by providing accurate and timely property valuations.

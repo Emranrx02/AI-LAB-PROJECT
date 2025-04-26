@@ -1,0 +1,14 @@
+
+\chapter{Proposed Improvements}
+
+\section{Proposed Improvements}
+
+In order to bridge the gap between simple models and the state-of-the-art performance seen in multi-modal architectures, we propose the following two improvements:
+
+\subsection{Multi-Branch Feature Extraction}
+
+Instead of feeding all features into a single monolithic network, the input data can be divided into multiple branches based on temporal characteristics (long-term vs short-term). Each branch independently processes its own feature set through convolutional or dense layers, extracting highly specialized feature representations. Later, these features can be merged and passed to fully connected layers for final price prediction. This enables the model to learn different dynamics separately, improving its predictive capability.
+
+\subsection{Gated Co-Attention Mechanism}
+
+Incorporating a Gated Co-Attention mechanism allows the model to selectively attend to more informative features while suppressing less relevant ones. This dynamic feature selection ensures that the most important spatial, temporal, or economic factors contribute to the prediction at each step. By doing so, the model can significantly reduce noise and focus on key signals, leading to better generalization and higher accuracy.

@@ -1,0 +1,26 @@
+\chapter{Literature Review}
+
+\section{Literature Review}
+
+House price prediction has been an active area of research, aiming to provide accurate valuation models for residential and commercial properties. Traditional statistical methods such as Support Vector Regression (SVR), Ridge Regression, and Decision Trees have been widely used in early studies. These models relied heavily on handcrafted features and linear assumptions, limiting their ability to model complex non-linear patterns inherent in real estate markets.
+
+Recent developments in deep learning have offered better alternatives, leveraging automatic feature extraction and representation learning to enhance predictive performance. Among the notable contributions, the paper titled \textbf{``Joint Gated Co-Attention Based Multi-Modal Networks for Subregion House Price Prediction''} proposed a new architecture that significantly advanced the state-of-the-art in this domain.
+
+The proposed model, known as \textbf{JGC\_MMN}, is built upon three major modules:
+
+\begin{itemize}
+    \item \textbf{DenseNet-Based Spatial Feature Extraction:} 
+    Instead of relying on shallow manually designed features, the authors used a modified version of DenseNet to capture spatial dependencies among properties. DenseNet's densely connected layers allowed rich feature propagation, improving the learning of neighborhood-level property patterns over time.
+    
+    \item \textbf{Kalman Filter for Future Expectation Modeling:} 
+    The authors recognized that house prices are influenced not only by current features but also by future market trends. To model this, a Kalman Filter was employed to predict future price trajectories based on historical and current data, thereby enabling dynamic future expectation integration.
+    
+    \item \textbf{Joint Gated Co-Attention Module:}
+    Rather than simply concatenating multiple feature sources (spatial, temporal, economic), the Joint Gated Co-Attention mechanism dynamically learned to assign importance weights across different modalities. This allowed the model to focus selectively on the most informative features for each property prediction.
+\end{itemize}
+
+The innovation in JGC\_MMN was its multi-modal fusion and temporal expectation modeling, which surpassed traditional methods by a significant margin. Experimental results on two major datasets — New York City (NYC) and Beijing — demonstrated substantial improvements. The model achieved RMSE scores of 21.43 on NYC and 60.19 on Beijing, outperforming strong baselines like XGBoost and traditional machine learning regressors.
+
+In contrast to this complex architecture, our project simplifies the prediction task by implementing a basic fully connected neural network. Our goal is to first establish a strong understanding of the house price prediction pipeline, setting a baseline performance that can be enhanced in future iterations by incorporating ideas such as multi-branch feature extraction and attention-based fusion.
+
+The literature thus highlights a clear trend: moving from linear models towards deep learning architectures capable of multi-modal integration and future dynamic modeling can significantly boost predictive accuracy. Our work draws inspiration from these developments and provides a simplified foundation for future enhancement towards a full JGC\_MMN-like system.

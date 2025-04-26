@@ -1,0 +1,25 @@
+\chapter{Methodology}
+
+\section{Methodology}
+
+Our methodology focuses on building a Multi-Branch Feature Extraction network as a proposed improvement. The approach can be summarized as follows:
+
+\begin{itemize}
+    \item \textbf{Data Preprocessing:} Clean the dataset by handling missing values, normalize numerical features using MinMaxScaler, and split the data into training and testing sets.
+    
+    \item \textbf{Branch Network Design:} 
+    \begin{itemize}
+        \item Branch-1 processes long-term historical data (features spanning past 5+ years).
+        \item Branch-2 processes short-term recent data (features spanning past 1-2 years).
+    \end{itemize}
+    
+    \item \textbf{Feature Extraction:} Each branch uses dense layers to extract hierarchical feature representations.
+
+    \item \textbf{Feature Fusion:} Outputs of both branches are concatenated into a single vector.
+
+    \item \textbf{Prediction:} The fused feature vector is passed through a few fully connected layers to produce the final predicted house price.
+    
+    \item \textbf{Optimization:} The model is trained using the Adam optimizer with Mean Squared Error (MSE) as the loss function.
+\end{itemize}
+
+This multi-branch strategy allows the model to focus better on different types of temporal dynamics separately, leading to improved overall performance.
